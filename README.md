@@ -1,6 +1,18 @@
 # README
 
 
+進捗
+
+part3
+19分
+drop zoneうまく行かない
+
+youtube
+https://web-crunch.com/lets-build-dribbble-clone-with-ruby-on-rails/
+
+
+github
+https://github.com/justalever/dribbble_clone/blob/master/app/assets/stylesheets/shots.scss
 
 - view port
 - bluma

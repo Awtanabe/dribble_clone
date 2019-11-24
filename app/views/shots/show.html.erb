@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @shot.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @shot.description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @shot.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_shot_path(@shot) %> |
-<%= link_to 'Back', shots_path %>
+<div class="section">
+  <div class="container">
+    <h1 class="title is-3"><%=@shot.title%></h1>
+    <div class="columns">
+     <div class="column is-8">
+       <span class="by has-text-gray-light">by</span>
+       <div class="user-thumb">
+         <%= gravatar_image_tag(@shot.user.email.gsub('span', 'mdeering'), alt: @shot.user.name, gravatar: {size: 20});%>
+       </div>
+       <div class="user-name has-text-wight-bold"><%= @shot.user.name%></div>
+       <div class="shot-time"><span class="has-text-grey-light">posted</span><span class="has-text-weight-semibold">
+					<%= verbose_date(@shot.created_at) %>
+				</span></div>
+     </div>
+    </div>
+  </div>
+</div>
